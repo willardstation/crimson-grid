@@ -462,7 +462,7 @@
 		return FALSE
 	if(z_move_flags & ZMOVE_FALL_CHECKS && (throwing || (movement_type & (FLYING|FLOATING)) || !has_gravity(start)))
 		return FALSE
-	if(z_move_flags & ZMOVE_CAN_FLY_CHECKS && !(movement_type & (FLYING|FLOATING)) && has_gravity(start))
+	if(z_move_flags & ZMOVE_CAN_FLY_CHECKS && !(movement_type & (FLYING)) && has_gravity(start))
 		if(z_move_flags & ZMOVE_FEEDBACK)
 			if(rider)
 				to_chat(rider, span_warning("[src] [p_are()] incapable of flight."))
